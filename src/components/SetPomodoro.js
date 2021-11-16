@@ -10,10 +10,10 @@ const SetPomodoro = () => {
         active: 'work'
     })
 
-    const {updateExecute} = useContext(SettingsContext)
+    const { updateExecute } = useContext(SettingsContext)
 
     const handleChange = input => {
-        const {name, value} = input.target
+        const { name, value } = input.target
         switch (name) {
             case 'work':
                 setNewTimer({
@@ -33,6 +33,7 @@ const SetPomodoro = () => {
                     long: parseInt(value)
                 })
                 break;
+            default: break;
         }
     }
     const handleSubmit = e => {
@@ -47,7 +48,7 @@ const SetPomodoro = () => {
                     <input className="input" type="number" name="shortBreak" onChange={handleChange} value={newTimer.short} />
                     <input className="input" type="number" name="longBreak" onChange={handleChange} value={newTimer.long} />
                 </div>
-                <button type='submit'>Set Timer</button>
+                <button type='submit'>Guardar</button>
             </form>
         </div>
     )
